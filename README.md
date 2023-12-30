@@ -1,5 +1,4 @@
 # Heart Disease Prediction
-### Heart_disease_pred
 - The goal of this project is to create a neural network to predict if a patient has heart disease, based on some clinical features.
 - [Here is a link to the dataset](https://archive.ics.uci.edu/dataset/45/heart+disease)
 - I use the pytorch library for the implementation of this project.
