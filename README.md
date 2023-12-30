@@ -143,7 +143,7 @@ print(missing_values.sum())
     dtype: int64
 
 
-#### I'm first going to binarize y to contain only information on whether or not the patient has heart disease. I will try to predict this value.
+I'm first going to binarize y to contain only information on whether or not the patient has heart disease. I will try to predict this value.
 
 
 
@@ -369,7 +369,7 @@ with warnings.catch_warnings():
 
 
     
-![png](/Users/benjaminmellin/Desktop/Teststuff/Convert/Heart_disease_pred_12_0.png)
+![png](images/Heart_disease_pred_12_0.png)
     
 
 
@@ -435,7 +435,7 @@ with warnings.catch_warnings():
 
 
     
-![png](/Users/benjaminmellin/Desktop/Teststuff/Convert/Heart_disease_pred_16_0.png)
+![png](images/Heart_disease_pred_16_0.png)
     
 
 
@@ -467,7 +467,7 @@ with warnings.catch_warnings():
 
 
     
-![png](/Users/benjaminmellin/Desktop/Teststuff/Convert/Heart_disease_pred_18_0.png)
+![png](images/Heart_disease_pred_18_0.png)
     
 
 
@@ -483,7 +483,7 @@ print(y_norm["num"].value_counts())
     Name: count, dtype: int64
 
 
-## Now that the data has been cleaned, time to reorganize into train/test loaders
+## Reorganize into train/test loaders
 
 
 ```python
@@ -523,7 +523,7 @@ test_loader  = DataLoader(test_dataDataset,batch_size=test_dataDataset.tensors[0
 devset_loader = DataLoader(devset_Dataset, batch_size = devset_Dataset.tensors[0].shape[0])
 ```
 
-## Now for the Deep Learning
+## Build the Deep Learning Network
 
 
 ```python
@@ -603,7 +603,7 @@ net(input)
 
 
 
-
+## Train the network
 ```python
 # Now I will create a function that trains the model
 
@@ -697,7 +697,7 @@ plt.show()
 
 
     
-![png](/Users/benjaminmellin/Desktop/Teststuff/Convert/Heart_disease_pred_28_0.png)
+![png](images/Heart_disease_pred_28_0.png)
     
 
 
@@ -705,7 +705,7 @@ plt.show()
 - I want to see how accurate the model is for both labels--heart disease vs no heart disease
 
 
-
+## Load the best model
 ```python
 # Now I load the best model onto a new model so I can establish final predictions
 bestnet = createTheHeartNet()[0] 
@@ -785,11 +785,11 @@ plt.show()
 
 
     
-![png](/Users/benjaminmellin/Desktop/Teststuff/Convert/Heart_disease_pred_33_1.png)
+![png](images/Heart_disease_pred_33_1.png)
     
 
 
-### Testing the network on the final test set
+## Test our network
 
 
 ```python
@@ -811,6 +811,6 @@ plt.show()
 
 
     
-![png](/Users/benjaminmellin/Desktop/Teststuff/Convert/Heart_disease_pred_35_0.png)
+![png](images/Heart_disease_pred_35_0.png)
     
 
